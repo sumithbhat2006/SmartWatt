@@ -1,0 +1,26 @@
+# ===================================================================
+# SmartWatt - Configuration Template
+# Copy this file to src/main/resources/application.properties
+# ===================================================================
+
+spring.application.name=smartwatt
+server.port=8085
+
+# MySQL Database Configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/smartwatt_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+spring.datasource.username=root
+spring.datasource.password=YOUR_MYSQL_PASSWORD_HERE
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA & Hibernate
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
+spring.jpa.open-in-view=true
+
+# Simulation and Business Defaults
+smartwatt.simulation.enabled=true
+smartwatt.simulation.interval-seconds=3
+smartwatt.tariff.default-rate-per-kwh=7.50
+smartwatt.threshold.max-power-watts=2500.0
+smartwatt.threshold.room-max-power-watts=1800.0
+smartwatt.threshold.appliance-long-run-hours=4.0
